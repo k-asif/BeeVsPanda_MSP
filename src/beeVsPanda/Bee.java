@@ -1,20 +1,23 @@
-package bVp;
+package beeVsPanda;
 
-import java.awt.Graphics;
-import javax.swing.ImageIcon;
+import javax.swing.*;
+import java.awt.*;
 
-public class Bullet{
-	
+public class Bee {
+
 	private int x,y;
 	private String imagePath;
-	
-	public Bullet(int x, int y, String imagePath) {
-		
-		
+	private boolean isAlive;
+
+	public Bee(int x, int y, String imagePath, boolean isAlive) {
+
 		this.x = x;
 		this.y = y;
 		this.imagePath = imagePath;
+		this.isAlive = isAlive;
+
 	}
+
 
 	public int getX() {
 		return x;
@@ -40,12 +43,20 @@ public class Bullet{
 		this.imagePath = imagePath;
 	}
 
-	public void draw(Graphics g){
-		
-		ImageIcon bullet = new ImageIcon(imagePath);
-		g.drawImage(bullet.getImage(),x,y,null);
-		
+	public boolean isAlive() {
+		return isAlive;
 	}
-	
-}
 
+	public void setAlive(boolean isAlive) {
+		this.isAlive = isAlive;
+	}
+
+	public void draw(Graphics g){
+
+		ImageIcon icon = new ImageIcon(imagePath);
+		g.drawImage(icon.getImage(), x, y, null);
+
+	}
+
+
+}

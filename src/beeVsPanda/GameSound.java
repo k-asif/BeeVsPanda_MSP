@@ -1,4 +1,4 @@
-package bVp;
+package beeVsPanda;
 
 import java.io.File;
 import javax.sound.sampled.AudioInputStream;

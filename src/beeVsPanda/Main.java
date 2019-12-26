@@ -1,4 +1,4 @@
-package bVp;
+package beeVsPanda;
 
 import javax.swing.*;
 
